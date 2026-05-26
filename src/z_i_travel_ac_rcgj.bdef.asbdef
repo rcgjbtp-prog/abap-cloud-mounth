@@ -1,0 +1,15 @@
+managed implementation in class zbp_i_travel_ac_rcgj unique;
+strict ( 2 );
+
+define behavior for z_i_travel_ac_rcgj alias Travel
+persistent table zrcgj_travel
+lock master
+authorization master ( instance )
+//etag master <field_name>
+{
+  create ( authorization : global );
+  update;
+  delete;
+  field ( readonly ) TravelUuid;
+
+}
